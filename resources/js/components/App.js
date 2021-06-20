@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const App = () => {
     return(
-        <p>テスト編集aaaaaa</p>
+        <p>テスト編集</p>
     )
 }
 
