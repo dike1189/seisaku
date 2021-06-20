@@ -33,7 +33,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var App = function App() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-    children: "\u8868\u793A\u3055\u308C\u307E\u3057\u305F"
+    children: "\u30C6\u30B9\u30C8\u7DE8\u96C6aaaaaa"
   });
 };
 
