@@ -6,7 +6,7 @@ import EditablePage from "./editablePage";
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <h1 className="Logo">notion.clone</h1>
+    <h1 className="Logo">エディター部分だよ</h1>
     <p className="Intro">
       Helloo{" "}
       <span role="img" aria-label="greetings" className="Emoji">
@@ -15,7 +15,7 @@ ReactDOM.render(
       You can add content below. Type <span className="Code">/</span> to see
       available elements.
     </p>
-    <EditablePage />Q
+    <EditablePage />
   </React.StrictMode>,
   rootElement
 );

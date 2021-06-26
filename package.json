@@ -25,6 +25,7 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
+        "match-sorter": "^6.3.0",
         "react-contenteditable": "^3.3.5"
     }
 }

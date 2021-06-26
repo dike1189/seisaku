@@ -4,4 +4,4 @@
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/index'); //ここをAppに書き換える
+require('./components/App'); //ここをAppに書き換える

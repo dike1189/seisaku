@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles.css";
+import "../../css/style.css";
 import EditableBlock from "./editableBlock";
 
 import uid from "./utils/uid";

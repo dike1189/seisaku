@@ -1,7 +1,7 @@
 import React from "react";
 import ContentEditable from "react-contenteditable";
 
-import "./styles.css";
+import "../../css/style.css";
 import SelectMenu from "./selectMenu";
 
 import { getCaretCoordinates, setCaretToEnd } from "./utils/caretHelpers";
