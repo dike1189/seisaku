@@ -20,8 +20,8 @@ class EditableBlock extends React.Component {
     this.contentEditable = React.createRef();
     this.state = {
       htmlBackup: null, // needed to store the html temporarely
-      html: "",
-      tag: "p",
+      html: props.html ,
+      tag: props.tag ,
       previousKey: "",
       selectMenuIsOpen: false,
       selectMenuPosition: {

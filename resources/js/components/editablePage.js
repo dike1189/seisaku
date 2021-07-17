@@ -6,7 +6,31 @@ import EditableBlock from "./editableBlock";
 import uid from "./utils/uid";
 import { setCaretToEnd } from "./utils/caretHelpers";
 
-const initialBlock = { id: uid(), html: "", tag: "p" };
+import axios from 'axios';
+
+// const initialBlock = { 
+//    id: uid(),
+//    html: "", 
+//    tag: "p" 
+//   };
+
+const initialBlock = { 
+   id: uid(),
+   html: "ここに保存するのか", 
+   tag: "p" 
+  };
+
+// const initialBlock2 = { 
+//     id: uid(),
+//     html: "2行目", 
+//     tag: "p" 
+//    };
+  
+//    const initialBlock3 = { 
+//     id: uid(),
+//     html: "3行目", 
+//     tag: "p" 
+//    };
 
 class EditablePage extends React.Component {
   constructor(props) {
@@ -14,8 +38,24 @@ class EditablePage extends React.Component {
     this.updatePageHandler = this.updatePageHandler.bind(this);
     this.addBlockHandler = this.addBlockHandler.bind(this);
     this.deleteBlockHandler = this.deleteBlockHandler.bind(this);
-    this.state = { blocks: [initialBlock] };
+    this.state = { blocks: [initialBlock],isupdated:false };
+    // this.fetchdata ();
+
   }
+
+ componentDidMount(){
+    axios
+        .get('/api/11/blocks')
+        .then((res) => {
+            const newBlocks = this.state.blocks.concat(res.data);
+            this.setState({
+                blocks: newBlocks
+            });
+        })
+        .catch(error => {
+            console.log(error)
+        })
+}
 
   updatePageHandler(updatedBlock) {
     const blocks = this.state.blocks;
@@ -55,23 +95,30 @@ class EditablePage extends React.Component {
     }
   }
 
+
+
   render() {
     return (
-      <div className="Page">
-        {this.state.blocks.map((block, key) => {
-          return (
-            <EditableBlock
-              key={key}
-              id={block.id}
-              tag={block.tag}
-              html={block.html}
-              updatePage={this.updatePageHandler}
-              addBlock={this.addBlockHandler}
-              deleteBlock={this.deleteBlockHandler}
-            />
-          );
-        })}
-      </div>
+      <>
+        <div className="Page">
+          {this.state.blocks.map((block, key) => {
+            return (
+            
+              <EditableBlock
+                key={key}
+                id={`${block.id}`}
+                // tag={block.tag}
+                tag={'p'}
+                html={block.html}
+                // html={"Come on!' So they had to do."}
+                updatePage={this.updatePageHandler}
+                addBlock={this.addBlockHandler}
+                deleteBlock={this.deleteBlockHandler}
+              />
+            );
+          })}
+        </div>
+      </>
     );
   }
 }

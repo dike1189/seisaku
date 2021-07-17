@@ -8,7 +8,7 @@ const App = () => {
         <React.StrictMode>
         <h1 className="Logo">エディター部分</h1>
         <p className="Intro">
-          こんばんわ{" "}
+          こ{" "}
           <span role="img" aria-label="greetings" className="Emoji">
             👋
           </span>{" "}
