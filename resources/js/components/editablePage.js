@@ -16,7 +16,7 @@ import axios from 'axios';
 
 const initialBlock = { 
    id: uid(),
-   html: "ここに保存するのか", 
+   html: "ここに保存する", 
    tag: "p" 
   };
 

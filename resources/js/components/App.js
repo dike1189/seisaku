@@ -6,9 +6,9 @@ import EditablePage from "./editablePage";
 const App = () => {
     return(
         <React.StrictMode>
-        <h1 className="Logo">エディター部分</h1>
+        <h1 className="Logo">Memogram</h1>
         <p className="Intro">
-          こ{" "}
+          ↓のブロック単位のエディタにメモを入力してね{" "}
           <span role="img" aria-label="greetings" className="Emoji">
             👋
           </span>{" "}
